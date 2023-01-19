@@ -74,6 +74,13 @@ with st.sidebar:
         st.subheader('If you know SVM algorithm')
         st.markdown('If you want to focus on any currency, by selecting Manually in the SVM section , you can change C and Gamma Manually.Just need to select Manually checkbox in the app.')
     
+    elif selected == 'Project-Report' :
+        with open("https://github.com/mrs1425/Predict-Crypto-app/blob/main/Project-Report.pdf", "rb") as file:
+            st.download_button(
+                    label="Download Project-Report",
+                    data=file,
+                    file_name="Project-Report.pdf",
+                    )
 st.sidebar.header('Input Data')
 
 # Input function
