@@ -47,13 +47,35 @@ st.write('''
          # CRYPTO Analyzer by Python
          **Reza & Yves**
          
-         ''')         
-
-#img = Image.open('https://github.com/mrs1425/Predict-Crypto-app/blob/main/Stockpic.jpeg')         
+         ''')    
+         
+#img = Image.open('/Users/mina/Desktop/Entreprise/Lusern/Courses/Programming/Projects/Final/forex/Learning/Test/Stockpic.jpeg')         
 #st.image(img,width=600,caption='Important: After Your Technical & Fundamental Analysis look our Predict')
 
-
+with st.sidebar:
+    selected = option_menu("Guide", ["Automatic-guide", 'Manually-guide','Project-Report'],default_index=1, 
+        icons=['list-task', 'list-task','download'], menu_icon="cast")
+    
+    if selected == "Automatic-guide":
+        col1, col2 = st.columns([0.8,0.2])
+        with col1:               # To display the header text using css style
+            st.markdown(""" <style> .font {
+            font-size:20px ; font-family: 'Cooper Black'; color: #FF9633;} 
+            </style> """, unsafe_allow_html=True)
+            st.markdown('<p class="font">C=1000 & Gamma = 0.1</p>', unsafe_allow_html=True)    
    
+    elif selected == "Manually-guide":
+        st.markdown(""" <style> .font {
+            font-size:20px ; font-family: 'Cooper Black'; color: #FF9633;} 
+            </style> """, unsafe_allow_html=True)
+            
+        st.markdown('<p class="font">Focus on your favourite currency</p>', unsafe_allow_html=True)
+
+        st.subheader('If you know SVM algorithm')
+        st.markdown('If you want to focus on any currency, by selecting Manually in the SVM section , you can change C and Gamma Manually.Just need to select Manually checkbox in the app.')
+    
+   
+            
 st.sidebar.header('Input Data')
 
 # Input function
@@ -221,4 +243,3 @@ plt.show()
 
 st.header('TRENDLINE : ')
 st.pyplot()
-
