@@ -80,7 +80,6 @@ with st.sidebar:
                     label="Download Project-Report",
                     data=file,
                     file_name="Project-Report.pdf",
-                    mime="application/octet-stream"
                     )
 st.sidebar.header('Input Data')
 
